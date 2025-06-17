@@ -20,18 +20,19 @@
   `http://localhost:8081/api/sanpham/filterByDiemDanhGia?diemDanhGia=4`
 ## giohang (http://localhost:8082)
 
-- **Lấy giỏ hàng theo id người dùng**
+- **Lấy giỏ hàng theo id người dùng**  
   `http://localhost:8082/api/giohang/userId/user_001`
 
-- **Thêm sản phẩm vào giỏ hàng**
-  `http://localhost:8082/api/giohang/addSanPham/user_001`
+- **Thêm sản phẩm vào giỏ hàng**  
+  `http://localhost:8082/api/giohang/addSanPham/user_001`  
 
   JSON:
+  ```json
   {
     "idSanPham": "sp_1201",
     "soLuong": 1,
     "giaLucThem": 12000
   }
 
-- **Xóa sản phẩm khỏi giỏ hàng**
+- **Xóa sản phẩm khỏi giỏ hàng**  
   `http://localhost:8082/api/giohang/removeSanPham?userId=user_001&productId=sp_1201`
