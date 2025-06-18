@@ -3,6 +3,7 @@ package com.example.giohang.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.example.giohang.model.GioHang;
 import com.example.giohang.model.SanPham;
 import com.example.giohang.service.GioHangService;
 
+@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/api/giohang")
 public class GioHangController {

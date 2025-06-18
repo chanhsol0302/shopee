@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.sanpham.model.SanPham;
 import com.example.sanpham.service.SanPhamService;
 
+@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/api/sanpham")
 public class SanPhamController {
@@ -32,7 +34,7 @@ public class SanPhamController {
 		return new ResponseEntity<>(sp, HttpStatus.OK);
 	}
 	
-	@GetMapping("/searchTenSanPham")
+	@GetMapping("/searchByTenSanPham")
 	public ResponseEntity<List<SanPham>> searchByTenSanPham(@RequestParam String tenSanPham) {
 		List<SanPham> ds = sanphamService.searchByTenSanPham(tenSanPham);
 		if (ds.isEmpty()) {
