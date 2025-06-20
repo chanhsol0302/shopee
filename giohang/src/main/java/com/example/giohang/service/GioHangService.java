@@ -19,6 +19,7 @@ public class GioHangService {
 	private GioHangRepository giohangRepo;
 	
 	public GioHang getGioHangByUserId(String userId) {
+		System.out.println(userId);
 		return giohangRepo.findByUserId(userId)
 				.orElseThrow(() -> new RuntimeException(
 						"Không tìm thấy giỏ hàng của user: " + userId));

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.sanpham.model.SanPham;
 import com.example.sanpham.service.SanPhamService;
 
+@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/api/sanpham")
 @CrossOrigin(origins = "*")
@@ -34,7 +35,7 @@ public class SanPhamController {
 		return new ResponseEntity<>(sp, HttpStatus.OK);
 	}
 	
-	@GetMapping("/searchTenSanPham")
+	@GetMapping("/searchByTenSanPham")
 	public ResponseEntity<List<SanPham>> searchByTenSanPham(@RequestParam String tenSanPham) {
 		List<SanPham> ds = sanphamService.searchByTenSanPham(tenSanPham);
 		if (ds.isEmpty()) {

@@ -17,6 +17,7 @@ import com.example.giohang.model.GioHang;
 import com.example.giohang.model.SanPham;
 import com.example.giohang.service.GioHangService;
 
+@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/api/giohang")
 @CrossOrigin(origins = "*")

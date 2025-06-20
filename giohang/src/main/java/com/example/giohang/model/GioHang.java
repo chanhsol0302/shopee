@@ -23,4 +23,5 @@ public class GioHang {
 	
 	@Field("sanPham")
 	private List<SanPham> sanpham = new ArrayList<>();
+
 }
