@@ -1,12 +1,13 @@
-package com.example.sanpham;
+package com.example.danhgia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SanphamApplication {
+public class DanhgiaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SanphamApplication.class, args);
+		SpringApplication.run(DanhgiaApplication.class, args);
 	}
+
 }

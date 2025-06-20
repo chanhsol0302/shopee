@@ -35,4 +35,27 @@
   }
 
 - **Xóa sản phẩm khỏi giỏ hàng**  
-  `http://localhost:8082/api/giohang/removeSanPham?userId=user_001&productId=sp_1201`
+  `http://localhost:8082/api/giohang/removeSanPham?userId=user_001&productId=sp_1201`  
+
+## danhgia (http://localhost:8083)  
+
+- **Lấy đánh giá theo id sản phẩm**  
+  `http://localhost:8083/api/danhgia/{sanphamId}`  
+
+- **Thêm đánh giá cho sản phẩm**  
+  `http://localhost:8083/api/danhgia`  
+
+  JSON:  
+  ```json  
+  {
+    "userId": " ",
+    "sanphamId": " ",
+    "diem": 4.3,
+    "binhLuan": " "
+  }  
+
+- **Xóa đánh giá**  
+  `http://localhost:8083/api/danhgia?userId=&sanphamId=`  
+  
+
+
