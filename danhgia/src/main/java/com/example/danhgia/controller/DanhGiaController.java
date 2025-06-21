@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +27,7 @@ public class DanhGiaController {
 	private DanhGiaService danhgiaService;
 	
 	@GetMapping("/{sanphamId}")
-	public ResponseEntity<List<DanhGia>> getDanhGiaBySanphamId(String sanphamId) {
+	public ResponseEntity<List<DanhGia>> getDanhGiaBySanphamId(@PathVariable String sanphamId) {
 		List<DanhGia> dsDanhGia = danhgiaService.getDanhGiaBySanphamId(sanphamId);
 		if (dsDanhGia.isEmpty()) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
