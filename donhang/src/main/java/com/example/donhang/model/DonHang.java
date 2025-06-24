@@ -11,29 +11,29 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import lombok.Data;
 
 @Data
-@Table("DonHang")
+@Table("donhang")
 public class DonHang {
 	@PrimaryKey
-	private UUID id;
+	private UUID iddonhang;
 	
-	@Column("idNguoiDung")
+	@Column("idnguoidung")
 	private String userId;
 	
-	@Column("idShop")
+	@Column("idshop")
 	private String shopId;
 	
-	@Column("ngayDat")
+	@Column("ngaydat")
 	private LocalDateTime date;
 	
-	@Column("tongGia")
+	@Column("tonggia")
 	private double totalPrice;
 	
-	@Column("trangThai")
+	@Column("trangthai")
 	private String status;
 	
-	@Column("diaChiNhan")
+	@Column("diachinhan")
 	private String address;
 	
-	@Column("hinhThucThanhToan")
+	@Column("hinhthucthanhtoan")
 	private String payment;
 }

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.sanpham.model.SanPham;
 import com.example.sanpham.service.SanPhamService;
 
-@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/api/sanpham")
 @CrossOrigin(origins = "*")

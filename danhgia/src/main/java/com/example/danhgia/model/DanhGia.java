@@ -18,7 +18,7 @@ public class DanhGia {
 	@Field(name = "userID")
 	private String userId;
 	
-	@Field(name = "sanphamID")
+	@Field(name = "sanPhamID")
 	private String sanphamId;
 	
 	private float diem;

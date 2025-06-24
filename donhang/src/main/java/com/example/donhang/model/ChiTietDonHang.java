@@ -7,14 +7,14 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("ChiTietDonHang")
+@Table("chitietdonhang")
 public class ChiTietDonHang {
 	@PrimaryKey
 	private ChiTietDonHangKey key;
 	
-	@Column("soLuong")
+	@Column("soluong")
 	private Integer quantity;
 	
-	@Column("giaDonVi")
+	@Column("giadonvi")
 	private Double price;
 }

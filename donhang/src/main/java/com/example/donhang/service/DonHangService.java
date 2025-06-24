@@ -23,7 +23,7 @@ public class DonHangService {
 	private ChiTietDonHangRepository chitietdonhangRepo;
 	
 	public List<DonHang> getByUserId(String userId) {
-		List<DonHang> dsDonHang = donhangRepo.findByUserId(userId);
+		List<DonHang> dsDonHang = donhangRepo.findByIdnguoidung(userId);
 		return dsDonHang;
 	}
 	
@@ -46,7 +46,7 @@ public class DonHangService {
 	
 	public DonHang createDonHang(DonHangDTO donhang) {
 		DonHang newDonHang = new DonHang();
-		newDonHang.setId(UUID.randomUUID());
+		newDonHang.setIddonhang(UUID.randomUUID());
 		newDonHang.setUserId(donhang.getUserId());
 		newDonHang.setShopId(donhang.getShopId());
 		newDonHang.setDate(donhang.getDate());
@@ -58,7 +58,7 @@ public class DonHangService {
 		
         for (SanPhamDTO sanPhamDTO : donhang.getProductList()) {
             ChiTietDonHangKey chiTietKey = new ChiTietDonHangKey();
-            chiTietKey.setId(newDonHang.getId());
+            chiTietKey.setId(newDonHang.getIddonhang());
             chiTietKey.setProductId(sanPhamDTO.getProductId());
 
             ChiTietDonHang chiTiet = new ChiTietDonHang();

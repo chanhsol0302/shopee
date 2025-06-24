@@ -11,5 +11,6 @@ import com.example.donhang.model.ChiTietDonHangKey;
 
 @Repository
 public interface ChiTietDonHangRepository extends CassandraRepository<ChiTietDonHang, ChiTietDonHangKey> {
+	
 	List<ChiTietDonHang> findByKeyId(UUID Id);
 }

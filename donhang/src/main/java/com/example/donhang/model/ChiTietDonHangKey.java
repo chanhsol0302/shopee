@@ -13,9 +13,9 @@ import lombok.Data;
 @Data
 @PrimaryKeyClass
 public class ChiTietDonHangKey implements Serializable {
-	@PrimaryKeyColumn(name = "idDonHang", type = PrimaryKeyType.PARTITIONED)
+	@PrimaryKeyColumn(name = "iddonhang", type = PrimaryKeyType.PARTITIONED)
 	private UUID id;
 	
-	@PrimaryKeyColumn(name = "idSanPham", type = PrimaryKeyType.PARTITIONED)
+	@PrimaryKeyColumn(name = "idsanpham", type = PrimaryKeyType.PARTITIONED)
 	private String productId;
 }
